@@ -298,7 +298,7 @@ html, body{
   position:absolute ;
   top: -80px;
   right: -140px;
-  background: url(/images/Decoration/shapes-1.svg);
+  background: url("../images/Decoration/shapes-1.svg");
   width: 100px;
   height: 85px;
 }
@@ -404,7 +404,7 @@ html, body{
   left: -250px;
   width: 136px;
   height: 115px;
-  background: url(/images/Decoration/Group-2.svg) 0 0 no-repeat;
+  background: url("../images/Decoration/Group-2.svg") 0 0 no-repeat;
 }
 
 .directions__inner::after {
@@ -415,7 +415,7 @@ html, body{
   right: -470px;
   width: 243px;
   height: 243px;
-  background: url(/images/Decoration/Group-3.svg) 0 0 no-repeat;
+  background: url("../images/Decoration/Group-3.svg") 0 0 no-repeat;
   opacity: .12;
 }
 
@@ -518,12 +518,12 @@ html, body{
   margin-left: 11px;
   width: 24px;
   height: 24px;
-  background: url(/images/icons/arrow-right.svg) 0 2px / 100% no-repeat;
+  background: url("../images/icons/arrow-right.svg") 0 2px / 100% no-repeat;
   transition: all .3s;
 }
 
 .directions__list-link:hover .directions__link-btn::after {
-  background: url(/images/icons/arrow-right-red.svg) 0 2px / 100% no-repeat;
+  background: url("../images/icons/arrow-right-red.svg") 0 2px / 100% no-repeat;
   transform: translateX(5px);
 }
 
@@ -580,7 +580,7 @@ html, body{
   left: -230px;
   width: 60px;
   height: 60px;
-  background: url(/images/Decoration/shapes-4.svg) 0 0 no-repeat;
+  background: url("../images/Decoration/shapes-4.svg") 0 0 no-repeat;
 }
 
 .cert__content {
@@ -648,7 +648,7 @@ html, body{
 }
 
 .team {
-  background: url(/images/Decoration/teambg1.svg) calc(50% + 140px) calc(50% - 120px) no-repeat, #f4f5f6;
+  background: url("../images/Decoration/teambg1.svg") calc(50% + 140px) calc(50% - 120px) no-repeat, #f4f5f6;
   
 }
 
@@ -837,7 +837,7 @@ html, body{
   left: -58px;
   width: 28px;
   height: 20px;
-  background: url(/images/icons/quot-ic.svg) 0 0 / 100% no-repeat;
+  background: url("../images/icons/quot-ic.svg") 0 0 / 100% no-repeat;
 }
 .testimonials__user {
   display: flex;
@@ -1169,7 +1169,7 @@ html, body{
   display: block;
   width: 16px;
   height: 15px;
-  background: url(../images/icons/kalendar.svg) 0 0 / 100% no-repeat;
+  background: url("../images/icons/kalendar.svg") 0 0 / 100% no-repeat;
   margin-right: 9px;
 }
 .blog__info-time {
@@ -1181,7 +1181,7 @@ html, body{
   display: block;
   width: 16px;
   height: 15px;
-  background: url(../images/icons/clock.svg) 0 0 / 100% no-repeat;
+  background: url("../images/icons/clock.svg") 0 0 / 100% no-repeat;
   margin-right: 9px;
 }
 .blog__item-title {
@@ -1211,7 +1211,7 @@ html, body{
   content: "";
   width: 24px;
   height: 24px;
-  background: url(../images/icons/arrow-right-red.svg) 0 0 / 100% no-repeat;
+  background: url("../images/icons/arrow-right-red.svg") 0 0 / 100% no-repeat;
   margin-left: 8px;
   transition: all .3s;
 }
@@ -1235,13 +1235,13 @@ html, body{
 }
 
 .blog__item--podcast .blog__image-box span::before{
-  background: url(../images/icons/podcast-ic.svg) 0 0 / 100% no-repeat;
+  background: url("../images/icons/podcast-ic.svg") 0 0 / 100% no-repeat;
 }
 .blog__item--video .blog__image-box span::before{
-  background: url(../images/icons/video-ic.svg) 0 0 / 100% no-repeat;
+  background: url("../images/icons/video-ic.svg") 0 0 / 100% no-repeat;
 }
 .blog__item--article .blog__image-box span::before{
-  background: url(../images/icons/article-ic.svg) 0 0 / 100% no-repeat;
+  background: url("../images/icons/article-ic.svg") 0 0 / 100% no-repeat;
 }
 
 
@@ -1413,7 +1413,7 @@ html, body{
   clip: rect(0, 0, 0, 0);
 }
 .questions__form-default:checked + .questions__form-custom{
-  background: url(../images/icons/check.svg) 50% 50% no-repeat,#FF3F3A;
+  background: url("../images/icons/check.svg") 50% 50% no-repeat,#FF3F3A;
   border: 1px solid #FF3F3A;
 }
 .questions__form-custom {
