@@ -120,9 +120,11 @@ html, body{
 }
 .header__logo {
     margin-right: 60px;
+  }
+.logo {
     transition: .3s;
 }
-.header__logo:hover{
+.logo:hover{
     transform: scale(1.05);
 }
 .header__nav {
@@ -1344,23 +1346,20 @@ html, body{
 /* ///////////////////////////// QUESTIONS ///////////////////////////////// */
 
 
-.questions {
-}
+
 .questions__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.questions__img {
-}
+
 .questions__content {
   margin-left: 30px;
 }
 .questions__heading {
   margin-bottom: 40px;
 }
-.questions__form {
-}
+
 .questions__form-row {
   display: flex;
   margin-bottom: 24px;
@@ -1389,9 +1388,7 @@ html, body{
 .questions__form-text::placeholder {
   color: #9a9ca5;
 }
-.questions__form-input {
-  
-}
+
 .questions__form-text {
   resize: none;
   height: 128px;
@@ -1501,8 +1498,7 @@ html, body{
 .footer__top-col:last-child .footer__top-title{
   white-space: wrap;
 }
-.footer__top-list {
-}
+
 .footer__top-item {
   margin-bottom: 8px;
 }
@@ -1522,8 +1518,7 @@ html, body{
 .footer__top-link:hover{
   opacity: 1;
 }
-.footer__form {
-}
+
 .footer__form-items{
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
