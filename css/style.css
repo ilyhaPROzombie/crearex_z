@@ -633,19 +633,19 @@ html, body{
 }
 
 .main__companies {
-  padding-bottom: 177px;
+  padding-bottom: 87px;
 }
 
 .main__program {
-  padding: 115px 0 93px;
+  padding: 205px 0 93px;
 }
 
 .main__blog {
-  padding: 93px 0 100px;
+  padding: 93px 0 0;
 }
 
 .main__info {
-  padding: 100px 0 0;
+  padding: 200px 0 0;
 }
 
 .main__questions {
