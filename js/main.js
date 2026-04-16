@@ -86,3 +86,21 @@ $('.program__acc-link').on('click', function (e){
         $(this).children('.program__acc-text').slideDown()
       }
   })
+
+  // \\\\\\\\\\\\\\\\\\ BURGER \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\ BURGER \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+setInterval(() => {
+  if ($(window).scrollTop()> 0 && $('.header__top').hasClass('header__top--open') === false ) {
+    $('.burger').addClass('burger--follow')
+  } else {
+    $('.burger').removeClass('burger--follow')
+  }
+}, 0);
+$('.burger').on('click', function (e){
+    e.preventDefault()
+    $('.header__top').toggleClass('header__top--open') 
+    $('.burger').toggleClass('burger-open') 
+})

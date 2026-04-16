@@ -25,7 +25,9 @@ html, body{
     height: 100%;
 }
 
-
+.burger{
+  display: none;
+}
 
 .main__cert {
   margin-bottom: -46px;
@@ -90,15 +92,12 @@ html, body{
 /* ///////////////////////////////   HEADER   //////////////////////////////////////// */
 
 .header {
-    font-weight: 700;
-    background: linear-gradient(180deg, #00000055 1%, #00000000 100%);
-    backdrop-filter: blur(10px);
-    height: auto;
-    display: flex;
-    flex-direction: column;
-
-    
-    position: fixed;   /* или absolute, если нужен только поверх hero */
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: fixed;   
   top: 0;
   left: 0;
   width: 100%;
@@ -150,7 +149,6 @@ html, body{
 .header__btn-box {
     display: flex;
     align-items: center;
-    
 }
 .header__top-btn {
     margin-right: 36px;
@@ -1597,4 +1595,131 @@ html, body{
 }
 .footer__go-top:hover {
   opacity: 1;
+}
+
+
+/* ////////////////////   MEDIA   ////////////////////////// */
+/* ////////////////////   MEDIA   ////////////////////////// */
+/* ////////////////////   MEDIA   ////////////////////////// */
+
+@media (max-width: 1100px) {
+  .burger{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 5;
+  width: 52px;
+  height: 52px;
+  border-radius: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s;
+}
+.burger span{
+  display: block;
+  height: 4px;
+  width: 30px;
+  background-color: #1e212c;
+    border-radius: 3px;
+    margin: 4px 0;
+    transition: all .3s;
+  }
+  .burger--follow{
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 0px 1px 2px #1e212c;
+  }
+  .burger-open{
+    transition: all .3s;
+  }
+  .burger-open span{
+  display: none;
+
+  }
+  .burger::before,
+  .burger::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 30px;
+    background-color: #1e212c;
+    border-radius: 3px;
+    transition: all .3s;
+  }
+  .burger-open::before{
+  transform: translateX(0) translateY(50%) rotateZ(45deg);
+  }
+  .burger-open::after{
+  transform: translateX(0) translateY(-50%) rotateZ(-45deg);
+  }
+  .header__body{
+  padding-top: 92px;
+  }
+  .header{
+  padding-top: 92px;
+  background: none;
+  backdrop-filter: none;
+  }
+  .header__top {
+  background-color: #ffffff50;
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 320px;
+  transform: translateX(100%);
+  transition: all .3s;
+  }
+  .header__top--open{
+  transform: translateX(0%);
+  }
+  .header__top-inner {
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  padding: 100px 0;
+  font-size: 20px;
+}
+.header__logo{
+  margin: 0;
+  order: 1;
+}
+.header__nav{
+  margin: 0 auto;
+  text-align: center;
+  order: 3;
+}
+.header__nav-list {
+  flex-direction: column;
+}
+  .header__nav-item {
+  margin: 0;
+  }
+  .header__nav-link{
+  display: block;
+  padding: 30px;
+  }
+  .header__btn-box {
+  flex-direction: column;
+  display: contents;
+  }
+  .header__top-btn {
+  margin-right: 0;
+  order: 5;
+  }
+  .header__user-nav{
+  order:2;
+  }
+}
+
+@media (max-width: 450px) {
+  .header__top {
+  min-width: none;
+  left: 0;
+  }
 }
