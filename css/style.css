@@ -1706,7 +1706,7 @@ html, body{
   font-size: 20px;
 }
 .header__logo{
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   order: 1;
 }
 .header__nav{
@@ -1735,9 +1735,10 @@ html, body{
   margin-right: 0;
   order: 5;
   width: 100%;
+  margin-top: 20px;
   }
   .header__user-nav{
   order:2;
-  margin: 0 0 15px 0;
+  margin: 0 0 20px 0;
   }
 }
