@@ -104,4 +104,5 @@ $('.burger, .overlay').on('click', function (e){
     $('.header__top').toggleClass('header__top--open') 
     $('.burger').toggleClass('burger-open') 
     $('.overlay').toggleClass('overlay--show')
+    $('.body').toggleClass('body-blocked')
 })
