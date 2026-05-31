@@ -1668,7 +1668,9 @@ html, body{
   text-transform: uppercase;
   margin-bottom: 12px;
   white-space: nowrap;
+  pointer-events: none;
 }
+
 .footer__top-col:last-child .footer__top-title{
   white-space: wrap;
 }
@@ -2264,8 +2266,31 @@ html, body{
   .footer__top-inner {
   flex-direction: column;
   }
+  .footer__top-title {
+  pointer-events: auto;
+  }
   .footer__top-title--slide {
   margin: 0;
+  position: relative;
+  padding-left: 20px;
+  }
+  .footer__top-title--slide::after,
+  .footer__top-title--slide::before{
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: -2px;
+    width: 15px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #787a80;
+    transition: all .3s;
+  }
+  .footer__top-title--slide::after{
+  transform: rotate(90deg);
+  }
+  .footer__top-title--slide.footer__top-title--on::after {
+  transform: rotate(0deg);
   }
   .footer__top-list {
   margin-top: 12px;

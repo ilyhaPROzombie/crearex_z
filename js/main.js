@@ -149,8 +149,6 @@ $('.program__acc-link').on('click', function (e){
   // \\\\\\\\\\\\\\\\\\ BURGER \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // \\\\\\\\\\\\\\\\\\ BURGER \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-
-
 setInterval(() => {
   if ($(window).scrollTop()> 0 && $('.header__top').hasClass('header__top--open') === false ) {
     $('.burger').addClass('burger--follow')
@@ -164,10 +162,22 @@ $('.burger, .overlay').on('click', function (e){
     $('.burger').toggleClass('burger-open') 
     $('.overlay').toggleClass('overlay--show')
     $('.body').toggleClass('body-blocked')
-})
+});
+$('.header__top a').on('click', function () {
+    $('.header__top').removeClass('header__top--open');
+    $('.burger').removeClass('burger-open');
+    $('.overlay').removeClass('overlay--show');
+    $('.body').removeClass('body-blocked');
+});
 
 
 // АДАПТИВ footer \\\\\\\\\\\\\\\\\\\\\\\\\\
-$('.footer__top-title--slide').on('click', function(){
-  $(this).next().slideToggle()
-})
+// $('.footer__top-title--slide').on('click', function(){
+//   $(this).next().slideToggle()
+// })
+
+$('.footer__top-title--slide').on('click', function (e){
+    e.preventDefault()
+    $(this).toggleClass('footer__top-title--on')
+    $(this).next().slideToggle()
+  })
