@@ -1,3 +1,9 @@
+// \\\\\\\\\\\\\\\\\\ BODY TRANSITION \\\\\\\\\\\\\\\\\
+// \\\\\\\\\\\\\\\\\\ BODY TRANSITION \\\\\\\\\\\\\\\\\
+
+setTimeout(function(){
+    $('body').addClass('body_visible');
+}, 300);
 
 // \\\\\\\\\\\\\\\\\\\\\\ DIRECTIONS FILTER  \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // \\\\\\\\\\\\\\\\\\\\\\ DIRECTIONS FILTER  \\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -8,6 +14,29 @@
     $('.directions__filter-btn').removeClass('directions__filter-btn--active');
     $(this).addClass('directions__filter-btn--active')
   });
+
+  
+// 1. Экземпляр с базовыми настройками
+var mixer = mixitup('.directions__list', {
+    animation: {
+        enable: true,  
+        queue: false
+    }
+});
+
+// 2. Функция, которая переключает анимацию в зависимости от ширины экрана
+function updateMixerAnimation() {
+    // Условие: анимация включена только при ширине окна больше 750 пикселей
+    var enableAnim = window.innerWidth > 750; 
+    mixer.configure({
+        animation: { enable: enableAnim }
+    });
+}
+
+// 3. Запускаем проверку при загрузке и вешаем её на событие изменения размера окна
+updateMixerAnimation();
+window.addEventListener('resize', updateMixerAnimation);
+
 
 // \\\\\\\\\\\\\\\\\\\\\\  YOUTUBE PLAYER  \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // \\\\\\\\\\\\\\\\\\\\\\  YOUTUBE PLAYER  \\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -30,6 +59,36 @@
     draggable: false, 
     waitForAnimate: true,
     speed: 300,
+  // АДАПТИВ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    responsive:
+    [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+          appendDots: $('.team__dots'),
+          waitForAnimate: true,
+          speed: 500,
+        },
+      }, 
+      {
+        breakpoint: 550,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+          appendDots: $('.team__dots'),
+          waitForAnimate: true,
+          speed: 500,
+        },
+      }, 
+    ]
   })
   $('.team__slider-prev').on('click', function (e){
     e.preventDefault()
@@ -105,4 +164,10 @@ $('.burger, .overlay').on('click', function (e){
     $('.burger').toggleClass('burger-open') 
     $('.overlay').toggleClass('overlay--show')
     $('.body').toggleClass('body-blocked')
+})
+
+
+// АДАПТИВ footer \\\\\\\\\\\\\\\\\\\\\\\\\\
+$('.footer__top-title--slide').on('click', function(){
+  $(this).next().slideToggle()
 })
