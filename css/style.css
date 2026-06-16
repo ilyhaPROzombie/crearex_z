@@ -12,11 +12,9 @@ html, body{
     scroll-behavior: smooth;
   }
 
-  
-
-/* ////////////  SCROLL BAR   ////////////////// */
-/* ////////////  SCROLL BAR   ////////////////// */
-/* ////////////  SCROLL BAR   ////////////////// */
+/* ////////////  SCROLL BAR и выделение  ////////////////// */
+/* ////////////  SCROLL BAR и выделение  ////////////////// */
+/* ////////////  SCROLL BAR и выделение  ////////////////// */
 
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(#f75e05, #ff3f3a);
@@ -27,6 +25,18 @@ html, body{
 }
 ::-webkit-scrollbar {
   max-width: 10px; 
+}
+
+:focus-visible,
+.button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #ff3f3a;
+  outline-offset: 2px;
+}
+
+::selection {
+  background-color: #f75e0573; 
+  color: #fff;       
 }
 
 /* ////////////  BODY   ////////////////// */

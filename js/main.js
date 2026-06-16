@@ -59,6 +59,7 @@ window.addEventListener('resize', updateMixerAnimation);
     draggable: false, 
     waitForAnimate: true,
     speed: 300,
+    
   // АДАПТИВ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     responsive:
     [
