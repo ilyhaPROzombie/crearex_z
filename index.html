@@ -51,9 +51,9 @@
               <div class="header__btn-box">
                 <a class="header__top-btn button" href="#questions">Get consultation</a>
                 <div class="header__user-nav">
-                <a class="header__user-btn" href="#">Log in</a>
+                <button data-popup-type="login" class="header__user-btn" href="#">Log in</button>
                 /
-                <a class="header__user-btn" href="#">Register</a>
+                <button data-popup-type="register"  class="header__user-btn" href="#">Register</button>
                 </div>
               </div>
           </div>
@@ -1398,6 +1398,46 @@
       </main>
       
   </div>
+
+  <div class="overlay-popup"></div>
+  <div class="header__user-popup login">
+      <form class="header__popup-form">
+        <label class="header__form-label-title">Log in</label>
+        <div>
+          <label class="header__form-label">Name</label>
+          <input class="header__popup-input name" type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label class="header__form-label">Email</label>
+          <input class="header__popup-input email" type="email" placeholder="Your working email" required>
+        </div>
+        <div>
+          <label class="header__form-label">Password</label>
+          <input class="header__popup-input password" type="password" placeholder="Your password" required>
+        </div>
+        <button class="header__form-submit button" type="submit">Submit</button>
+      </form>
+  </div>
+
+  <div class="header__user-popup register">
+      <form class="header__popup-form">
+        <label class="header__form-label-title">Register</label>
+        <div>
+          <label class="header__form-label">Name</label>
+          <input class="header__popup-input name" type="text" placeholder="Your name" required>
+        </div>
+        <div>
+          <label class="header__form-label">Email</label>
+          <input class="header__popup-input email" type="email" placeholder="Your working email" required>
+        </div>
+        <div>
+          <label class="header__form-label">Password</label>
+          <input class="header__popup-input password" type="password" placeholder="Your password" required>
+        </div>
+        <button class="header__form-submit button" type="submit">Submit</button>
+      </form>
+  </div>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
