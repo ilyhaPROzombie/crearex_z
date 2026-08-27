@@ -95,6 +95,7 @@ a:focus-visible {
   background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
   white-space: nowrap;
   transition: 0.3s;
+  user-select: none
 }
 .button:hover {
   transform: scale(1.05);
@@ -116,6 +117,7 @@ a:focus-visible {
     0 0;
   background-repeat: no-repeat;
   background-clip: border-box;
+  user-select: none
 }
 
 .button--empty span {
@@ -288,12 +290,32 @@ a:focus-visible {
   font-weight: 700;
 }
 
+.header__form-close {
+  display: inline-flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid #424551;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  width: 32px; 
+  height: 32px;
+}
+
 .header__popup-input {
   display: block;
   border: 1px solid #d7dadd;
   border-radius: 4px;
   padding: 13px 16px;
   width: 100%;
+}
+
+.header__form-submit {
+  margin-top: 30px;
 }
 
 .popup--show {

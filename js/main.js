@@ -18,6 +18,29 @@ headerUserNav.addEventListener("click", (event) => {
 const loginPopup = document.querySelector(".header__user-popup.login");
 const registerPopup = document.querySelector(".header__user-popup.register");
 const overlayPopup = document.querySelector(".overlay-popup");
+const body = document.querySelector(".body");
+const bodyBlock = document.querySelector(".body-blocked");
+
+
+//проверка состояния бургер-меню
+function isBurgerMenuOpen() {
+  return $(".header__top").hasClass("header__top--open");
+}
+
+//махинации с классом body-blocked
+function updateBodyBlockedState() {
+  const popupIsOpen = 
+    loginPopup?.classList.contains("popup--show") || 
+    registerPopup?.classList.contains("popup--show");
+  
+  if (popupIsOpen || isBurgerMenuOpen()) {
+    body?.classList.add("body-blocked");
+    bodyBlock?.classList.add("body-blocked");
+  } else {
+    body?.classList.remove("body-blocked");
+    bodyBlock?.classList.remove("body-blocked");
+  }
+}
 
 function createPopup(type) {
   // изначальное скрытие попапов
@@ -25,20 +48,27 @@ function createPopup(type) {
   registerPopup?.classList.remove("popup--show");
   overlayPopup?.classList.remove("overlay-popup--show");
 
-    if (type === "login") {
+  if (type === "login") {
     loginPopup?.classList.add("popup--show");
     overlayPopup?.classList.add("overlay-popup--show");
   } else if (type === "register") {
     registerPopup?.classList.add("popup--show");
     overlayPopup?.classList.add("overlay-popup--show");
   }
+  updateBodyBlockedState();
 }
 
-document.querySelector(".overlay-popup")?.addEventListener("click", () => {
-  loginPopup?.classList.remove("popup--show");
-  registerPopup?.classList.remove("popup--show");
-  overlayPopup?.classList.remove("overlay-popup--show");
-});
+document
+  .querySelectorAll(".overlay-popup, .header__form-close")
+  .forEach((element) => {
+    element.addEventListener("click", () => {
+      loginPopup?.classList.remove("popup--show");
+      registerPopup?.classList.remove("popup--show");
+      overlayPopup?.classList.remove("overlay-popup--show");
+      updateBodyBlockedState();
+    });
+  });
+
 // \\\\\\\\\\\\\\\\\\\\\\ DIRECTIONS FILTER  \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // \\\\\\\\\\\\\\\\\\\\\\ DIRECTIONS FILTER  \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -195,20 +225,16 @@ $(".burger, .overlay").on("click", function (e) {
   $(".header__top").toggleClass("header__top--open");
   $(".burger").toggleClass("burger-open");
   $(".overlay").toggleClass("overlay--show");
-  $(".body").toggleClass("body-blocked");
+  updateBodyBlockedState();
 });
 $(".header__top a").on("click", function () {
   $(".header__top").removeClass("header__top--open");
   $(".burger").removeClass("burger-open");
   $(".overlay").removeClass("overlay--show");
-  $(".body").removeClass("body-blocked");
+  updateBodyBlockedState();
 });
 
 // АДАПТИВ footer \\\\\\\\\\\\\\\\\\\\\\\\\\
-// $('.footer__top-title--slide').on('click', function(){
-//   $(this).next().slideToggle()
-// })
-
 $(".footer__top-title--slide").on("click", function (e) {
   e.preventDefault();
   $(this).toggleClass("footer__top-title--on");

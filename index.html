@@ -51,9 +51,9 @@
               <div class="header__btn-box">
                 <a class="header__top-btn button" href="#questions">Get consultation</a>
                 <div class="header__user-nav">
-                <button data-popup-type="login" class="header__user-btn" href="#">Log in</button>
+                <button data-popup-type="login" class="header__user-btn">Log in</button>
                 /
-                <button data-popup-type="register"  class="header__user-btn" href="#">Register</button>
+                <button data-popup-type="register"  class="header__user-btn">Register</button>
                 </div>
               </div>
           </div>
@@ -1403,6 +1403,7 @@
   <div class="header__user-popup login">
       <form class="header__popup-form">
         <label class="header__form-label-title">Log in</label>
+          <div class="header__form-close">x</div>
         <div>
           <label class="header__form-label">Name</label>
           <input class="header__popup-input name" type="text" placeholder="Your name" required>
@@ -1421,7 +1422,8 @@
 
   <div class="header__user-popup register">
       <form class="header__popup-form">
-        <label class="header__form-label-title">Register</label>
+          <label class="header__form-label-title">Register</label>
+          <div class="header__form-close">x</div>
         <div>
           <label class="header__form-label">Name</label>
           <input class="header__popup-input name" type="text" placeholder="Your name" required>
@@ -1434,7 +1436,7 @@
           <label class="header__form-label">Password</label>
           <input class="header__popup-input password" type="password" placeholder="Your password" required>
         </div>
-        <button class="header__form-submit button" type="submit">Submit</button>
+        <button class="header__form-submit button button--empty" type="submit"><span>Submit</span></button>
       </form>
   </div>
 
