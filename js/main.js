@@ -5,7 +5,7 @@ const btnRu = document.getElementById("lang-ru");
 if (btnEn) {
   btnEn.addEventListener("click", () => {
   localStorage.setItem("preferred-lang", "en");
-  window.location.href = "index-en.html";
+  window.location.href = "index.html";
 });
 }
 if (btnRu) {
@@ -20,7 +20,7 @@ const savedLang = localStorage.getItem("preferred-lang");
 
 if(savedLang && savedLang !== currentLang) {
   if(savedLang == "en") {
-    window.location.href = "index-en.html";
+    window.location.href = "index.html";
   }
   if(savedLang == "ru") {
     window.location.href = "index-ru.html";
