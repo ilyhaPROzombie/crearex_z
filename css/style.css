@@ -12,6 +12,38 @@ body {
   scroll-behavior: smooth;
 }
 
+:lang(ru) h1 {
+  font-size: 3.3rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+:lang(ru) h2 {
+  font-weight: 600;
+}
+
+:lang(ru) .header__title {
+  word-break: break-word;
+}
+
+:lang(ru) .header__nav-item {
+  margin-right: 25px;
+}
+
+:lang(ru) .about__paragraph--accent {
+  font-weight: 500;
+}
+
+:lang(ru) .button {
+  padding: 0 20px;
+}
+
+:lang(ru) .heading__title {
+  font-size: 32px;
+}
+
+
 /* ////////////  SCROLL BAR и выделение  ////////////////// */
 /* ////////////  SCROLL BAR и выделение  ////////////////// */
 /* ////////////  SCROLL BAR и выделение  ////////////////// */
@@ -95,7 +127,7 @@ a:focus-visible {
   background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
   white-space: nowrap;
   transition: 0.3s;
-  user-select: none
+  user-select: none;
 }
 .button:hover {
   transform: scale(1.05);
@@ -117,7 +149,7 @@ a:focus-visible {
     0 0;
   background-repeat: no-repeat;
   background-clip: border-box;
-  user-select: none
+  user-select: none;
 }
 
 .button--empty span {
@@ -302,7 +334,7 @@ a:focus-visible {
   position: fixed;
   top: 15px;
   right: 20px;
-  width: 32px; 
+  width: 32px;
   height: 32px;
 }
 
@@ -366,6 +398,15 @@ a:focus-visible {
 
 .header__user-btn:hover {
   color: #ff3f3a;
+}
+
+.header__user-btn:last-child {
+  margin-left: 10px;
+  border: #424551 2px solid;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  align-items: center;
 }
 
 /* ////////////////////////////////  HEADER BODY  //////////////////////////////////// */
@@ -547,7 +588,7 @@ a:focus-visible {
 .about__numbers {
   margin-left: 30px;
   align-self: center;
-  white-space: nowrap;
+  white-space: wrap;
 }
 
 .about__number {
@@ -1881,6 +1922,20 @@ a:focus-visible {
 /* ////////////////////   MEDIA   /////////////////////// */
 /* ////////////////////   MEDIA   /////////////////////// */
 
+/* ////////////////////  width 1280  //////////////////// */
+  /* ///////////// header ///////////////// */
+@media (max-width: 1280px) {
+  .header__btn-box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .header__btn-box .header__top-btn {
+    margin-right: 0px;
+    margin-top: 5px;
+  }
+}
+
+
 /* ////////////////////  width 1200  //////////////////// */
 @media (max-width: 1200px) {
   /* ///////////// header ///////////////// */
@@ -2412,6 +2467,9 @@ a:focus-visible {
   /* ///////////// header ///////////////// */
   .header__title {
     font-size: 40px;
+  }
+  :lang(ru) .header__title {
+    font-size: 33px;
   }
   .header__content-buttons {
     flex-direction: column;

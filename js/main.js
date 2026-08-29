@@ -1,3 +1,32 @@
+/////////////////// TRANSLATE ALL /////////////////////
+/////////////////// TRANSLATE ALL /////////////////////
+const btnEn = document.getElementById("lang-en");
+const btnRu = document.getElementById("lang-ru");
+if (btnEn) {
+  btnEn.addEventListener("click", () => {
+  localStorage.setItem("preferred-lang", "en");
+  window.location.href = "index-en.html";
+});
+}
+if (btnRu) {
+  btnRu.addEventListener("click", () => {
+  localStorage.setItem("preferred-lang", "ru");
+  window.location.href = "index-ru.html";
+});
+}
+
+const currentLang = document.documentElement.lang;
+const savedLang = localStorage.getItem("preferred-lang");
+
+if(savedLang && savedLang !== currentLang) {
+  if(savedLang == "en") {
+    window.location.href = "index-en.html";
+  }
+  if(savedLang == "ru") {
+    window.location.href = "index-ru.html";
+  }
+}
+
 // \\\\\\\\\\\\\\\\\\ BODY TRANSITION \\\\\\\\\\\\\\\\\
 // \\\\\\\\\\\\\\\\\\ BODY TRANSITION \\\\\\\\\\\\\\\\\
 
